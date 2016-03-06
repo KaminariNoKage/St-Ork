@@ -1,0 +1,93 @@
+{
+	"0,0,-1": {	
+		"name": "0,0,-1",
+		"description": "You are underwater. Light glimmers from above.",
+		"items": [],
+		"directions": {
+			"north": True,
+			"south": True,
+			"east": True, 
+			"west": True, 
+			"up": True, 
+			"down": True
+		}
+	},
+	"0,0,-2": {
+		"name": "0,0,-2",
+		"description": "You are underwater and floating over a bed of moss. Light glimmers from above.",
+		"items": [],
+		"directions": {
+			"north": True,
+			"south": True,
+			"east": True, 
+			"west": True, 
+			"up": True, 
+			"down": False
+		}
+	},
+	"0,0,0": {
+		"name": "0,0,0",
+		"description": "You are surfaced in the middle of the lake. There is mist and water surrounds you in all directions.",
+		"items": [],
+		"directions": {
+			"north": True,
+			"south": True,
+			"east": True, 
+			"west": True, 
+			"up": False, 
+			"down": True
+		}
+	},
+	"0,1,0":{
+		"name": "0,1,0",
+		"description": "You are in a lake. There is mist and water surrounds you in all directions, but you can make out the shore in the distance.",
+		"items": [],
+		"directions": {
+			"north": True,
+			"south": True,
+			"east": True, 
+			"west": True, 
+			"up": False, 
+			"down": True
+		}
+	},
+	"0,-1,0":{
+		"name": "0,-1,0",
+		"description": "You are in a lake. There is mist and water surrounds you in all directions, but you can make out the shore in the distance.",
+		"items": [],
+		"directions": {
+			"north": True,
+			"south": True,
+			"east": True, 
+			"west": True, 
+			"up": False, 
+			"down": True
+		}
+	},
+	"1,0,0":{
+		"name": "1,0,0",
+		"description": "You are in a lake. There is mist and water surrounds you in all directions, but you can make out the shore in the distance.",
+		"items": ["log"],
+		"directions": {
+			"north": True,
+			"south": True,
+			"east": True, 
+			"west": True, 
+			"up": False, 
+			"down": True
+		}
+	},
+	"-1,0,0":{
+		"name": "-1,0,0",
+		"description": "You are in a lake. There is mist and water surrounds you in all directions, but you can make out the shore in the distance.",
+		"items": [],
+		"directions": {
+			"north": True,
+			"south": True,
+			"east": True, 
+			"west": True, 
+			"up": False, 
+			"down": True
+		}
+	}
+}

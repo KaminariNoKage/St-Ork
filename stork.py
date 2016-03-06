@@ -55,7 +55,7 @@ class Character:
         self.race = "Hoomin"
         self.sex = "yes please"
         self.name = "Bobio"
-        self.stats = {"hp", "stamina", "strength", "wisdom", "dexterity", "charisma", ""} 
+        self.stats = {"hp", "stamina", "strength", "wisdom", "dexterity", "charisma"} 
 
 def parse_command(cmd_string):
     pass
