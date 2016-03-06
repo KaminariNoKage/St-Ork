@@ -2,6 +2,7 @@
 	"0,0,-1": {	
 		"name": "0,0,-1",
 		"description": "You are underwater. Light glimmers from above.",
+		"terrain": "underwater",
 		"items": [],
 		"directions": {
 			"north": "default",
@@ -14,8 +15,14 @@
 	},
 	"1,0,-1": {	
 		"name": "0,0,-1",
-		"description": "You are underwater. Light glimmers from above and you are standing on a large log.",
-		"items": [],
+		"description": "You are underwater. Light glimmers from above and you are standing on a log.",
+		"terrain": "underwater",
+		"items": [{
+			"type": "log",
+			"weight": 500,
+			"description": "The size of the log is impressive.",
+			"count": 1
+		}],
 		"directions": {
 			"north": "default",
 			"south": "default",
@@ -28,6 +35,7 @@
 	"-1,0,-1": {	
 		"name": "0,0,-1",
 		"description": "You are underwater. Light glimmers from above and your foot taps a mossy bed below.",
+		"terrain": "underwater",
 		"items": [],
 		"directions": {
 			"north": "default",
@@ -41,6 +49,7 @@
 	"0,1,-1": {	
 		"name": "0,1,-1",
 		"description": "You are underwater. Light glimmers from above and your foot taps a mossy bed below.",
+		"terrain": "underwater",
 		"items": [],
 		"directions": {
 			"north": "default",
@@ -54,6 +63,7 @@
 	"0,-1,-1": {	
 		"name": "0,-1,-1",
 		"description": "You are underwater. Light glimmers from above and your foot taps a mossy bed below.",
+		"terrain": "underwater",
 		"items": [],
 		"directions": {
 			"north": "default",
@@ -67,7 +77,11 @@
 	"0,0,-2": {
 		"name": "0,0,-2",
 		"description": "You are underwater, surrounded by large bolders and floating over a bed of moss. Light glimmers from above.",
-		"items": ["pebble"],
+		"terrain": "underwater",
+		"items": [{
+			"type": "pebble",
+			"count": 100
+		}],
 		"directions": {
 			"north": "",
 			"south": "",
@@ -80,6 +94,7 @@
 	"0,0,0": {
 		"name": "0,0,0",
 		"description": "You are surfaced in the middle of the lake. There is mist and water surrounds you in all directions.",
+		"terrain": "water",
 		"items": [],
 		"directions": {
 			"north": "default",
@@ -93,6 +108,7 @@
 	"0,1,0":{
 		"name": "0,1,0",
 		"description": "You are in a lake. There is mist and water surrounds you in all directions, but you can make out the shore in the distance.",
+		"terrain": "water",
 		"items": [],
 		"directions": {
 			"north": "default",
@@ -106,6 +122,7 @@
 	"0,2,0":{
 		"name": "0,1,0",
 		"description": "You are knee deep in water. Through the mist, you can make out a forest to the north.",
+		"terrain": "water",
 		"items": [],
 		"directions": {
 			"north": "default",
@@ -119,6 +136,7 @@
 	"0,-1,0":{
 		"name": "0,-1,0",
 		"description": "You are in a lake. There is mist and water surrounds you in all directions, but you can make out the shore in the distance.",
+		"terrain": "water",
 		"items": [],
 		"directions": {
 			"north": "default",
@@ -132,6 +150,7 @@
 	"0,-2,0":{
 		"name": "0,-1,0",
 		"description": "You are knee deep in water. To the north, there is only more water. To the south there is a forest.",
+		"terrain": "water",
 		"items": [],
 		"directions": {
 			"north": "default",
@@ -145,6 +164,7 @@
 	"1,0,0":{
 		"name": "1,0,0",
 		"description": "You are in a lake. There is mist and water surrounds you in all directions, but you can make out the shore in the distance.",
+		"terrain": "water",
 		"items": [],
 		"directions": {
 			"north": "default",
@@ -157,7 +177,8 @@
 	},
 	"1,1,0":{
 		"name": "1,1,0",
-		"description": "You are knee deep in water and standing on a log. A mist surrounds you in all directions. You cannot see anything.",
+		"description": "You are knee deep in water. A mist surrounds you in all directions, so thick that you cannot see anything.",
+		"terrain": "water",
 		"items": [],
 		"directions": {
 			"north": "default",
@@ -171,6 +192,7 @@
 	"1,-1,0":{
 		"name": "1,-1,0",
 		"description": "You are knee deep in water and a mist surrounds you in all directions. You cannot see anything.",
+		"terrain": "water",
 		"items": [],
 		"directions": {
 			"north": "default",
@@ -184,6 +206,7 @@
 	"-1,0,0":{
 		"name": "-1,0,0",
 		"description": "You are in a lake. There is mist and water surrounds you in all directions, but you can make out the shore in the distance.",
+		"terrain": "water",
 		"items": [],
 		"directions": {
 			"north": "default",
@@ -197,6 +220,7 @@
 	"-1,1,0":{
 		"name": "-1,1,0",
 		"description": "You are knee deep in water. To the south and east, there is a lake covered by a mist; to the north and west there is a rocky shore and a forest.",
+		"terrain": "water",
 		"items": [],
 		"directions": {
 			"north": "default",
@@ -210,12 +234,783 @@
 	"-1,-1,0":{
 		"name": "-1,-1,0",
 		"description": "You are knee deep in water. To the north and east, there is a lake covered by a mist; to the south and west there is a rocky shore and a forest.",
+		"terrain": "water",
 		"items": [],
 		"directions": {
 			"north": "default",
 			"south": "default",
 			"east": "default", 
 			"west": "default", 
+			"up": "", 
+			"down": ""
+		}
+	},
+	"-1,-2,0":{
+		"name": "-1,-2,0",
+		"description": "You are on the shore of a lake. To the north and east, there is a lake covered by a mist; to the south and west there forest.",
+		"terrain": "shore",
+		"items": [],
+		"directions": {
+			"north": "default",
+			"south": "default",
+			"east": "default", 
+			"west": "default", 
+			"up": "", 
+			"down": ""
+		}
+	},
+	"1,-2,0":{
+		"name": "1,-2,0",
+		"description": "You are on the shore of a lake. To the south is a forest, to the north a thick mist.",
+		"terrain": "shore",
+		"items": [],
+		"directions": {
+			"north": "default",
+			"south": "default",
+			"east": "default", 
+			"west": "default", 
+			"up": "", 
+			"down": ""
+		}
+	},
+	"0,-3,0":{
+		"name": "0,-3,0",
+		"description": "You are on the shore of a lake. To the south is a forest; to the north, a lake covered by a mist.",
+		"terrain": "shore",
+		"items": [],
+		"directions": {
+			"north": "default",
+			"south": "default",
+			"east": "default", 
+			"west": "default", 
+			"up": "", 
+			"down": ""
+		}
+	},
+	"0,3,0":{
+		"name": "0,3,0",
+		"description": "You are on the shore of a lake. To the north is a forest; to the south, a lake covered by a strange mist.",
+		"terrain": "shore",
+		"items": [],
+		"directions": {
+			"north": "default",
+			"south": "default",
+			"east": "default", 
+			"west": "default", 
+			"up": "", 
+			"down": ""
+		}
+	},
+	"-1,2,0":{
+		"name": "-1,2,0",
+		"description": "You are on the shore of a lake. To the north is a forest; to the south, a lake.",
+		"terrain": "shore",
+		"items": [],
+		"directions": {
+			"north": "default",
+			"south": "default",
+			"east": "default", 
+			"west": "default", 
+			"up": "", 
+			"down": ""
+		}
+	},
+	"1,2,0":{
+		"name": "1,2,0",
+		"description": "You think you are on the shore of a lake. A heavy mist prevents you from seeing past your nose.",
+		"terrain": "shore",
+		"items": [],
+		"directions": {
+			"north": "default",
+			"south": "default",
+			"east": "default", 
+			"west": "default", 
+			"up": "", 
+			"down": ""
+		}
+	},
+	"-2,0,0":{
+		"name": "-2,0,0",
+		"description": "You are knee deep in water. To the west is a cliff which is too steep to climb.",
+		"terrain": "water",
+		"items": [],
+		"directions": {
+			"north": "default",
+			"south": "default",
+			"east": "default", 
+			"west": "", 
+			"up": "", 
+			"down": ""
+		}
+	},
+	"2,0,0":{
+		"name": "2,0,0",
+		"description": "You are knee deep in water. To the west is the rest of the lake, to the south is forest, but everywhere else is covered by mist.",
+		"terrain": "water",
+		"items": [],
+		"directions": {
+			"north": "default",
+			"south": "default",
+			"east": "default", 
+			"west": "default", 
+			"up": "", 
+			"down": ""
+		}
+	},
+	"2,-1,0":{
+		"name": "2,-1,0",
+		"description": "You are on the shore of a lake. To the south is a forest, to the north a thick mist.",
+		"terrain": "shore",
+		"items": [],
+		"directions": {
+			"north": "default",
+			"south": "default",
+			"east": "default", 
+			"west": "default", 
+			"up": "", 
+			"down": ""
+		}
+	},
+	"-2,1,0":{
+		"name": "-2,1,0",
+		"description": "You are on the shore of a lake. To the west is a cliff too high to climb and to the southeast is a lake on which rests a strange mist.",
+		"terrain": "shore",
+		"items": [],
+		"directions": {
+			"north": "default",
+			"south": "default",
+			"east": "default", 
+			"west": "", 
+			"up": "", 
+			"down": ""
+		}
+	},
+	"-2,2,0":{
+		"name": "-2,2,0",
+		"description": "You are on the shore of a lake, a small stream trickling beside you. To the west is a cliff too high to climb and to the southeast is a lake on which rests a strange mist.",
+		"terrain": "shore",
+		"items": [],
+		"directions": {
+			"north": "default",
+			"south": "default",
+			"east": "default", 
+			"west": "", 
+			"up": "", 
+			"down": ""
+		}
+	},
+	"-2,3,0":{
+		"name": "-2,3,0",
+		"description": "You are standing at the bottom of a cliff, far too steep to climb. Flowers sprout from among random niches and a trickling waterfall feeds a small stream which flows beside you.",
+		"terrain": "grass",
+		"items": [],
+		"directions": {
+			"north": "",
+			"south": "default",
+			"east": "default", 
+			"west": "", 
+			"up": "", 
+			"down": ""
+		}
+	},
+	"-1,3,0":{
+		"name": "-1,3,0",
+		"description": "You are standing in a clearing. Flowers sprout from among random niches on a nearby cliff. To the southeast there is a lake upon which rests a strange mist.",
+		"terrain": "grass",
+		"items": [],
+		"directions": {
+			"north": "default",
+			"south": "default",
+			"east": "default", 
+			"west": "default", 
+			"up": "", 
+			"down": ""
+		}
+	},
+	"-1,4,0":{
+		"name": "-1,4,0",
+		"description": "You are standing next to a cliff. To the southeast there is a lake upon which rests a strange mist which slowly stretches to the north.",
+		"terrain": "grass",
+		"items": [],
+		"directions": {
+			"north": "",
+			"south": "default",
+			"east": "default", 
+			"west": "", 
+			"up": "", 
+			"down": ""
+		}
+	},
+	"-2,-1,0":{
+		"name": "-2,-1,0",
+		"description": "You are standing on the shore of a lake. To the west is a cliff much too steep to climb and to the east is a lake covered by an eerie mist.",
+		"terrain": "shore",
+		"items": [],
+		"directions": {
+			"north": "default",
+			"south": "default",
+			"east": "default", 
+			"west": "", 
+			"up": "", 
+			"down": ""
+		}
+	},
+	"-2,-2,0":{
+		"name": "-2,-2,0",
+		"description": "You are standing on grass. To the west is a cliff much too steep to climb and to the northeast is a lake covered by an eerie mist.",
+		"terrain": "grass",
+		"items": [],
+		"directions": {
+			"north": "default",
+			"south": "default",
+			"east": "default", 
+			"west": "", 
+			"up": "", 
+			"down": ""
+		}
+	},
+	"-2,-3,0":{
+		"name": "-2,-3,0",
+		"description": "You are in a forest. To the west is a cliff much too steep to climb and to the northeast is a lake covered by an eerie mist. Everywhere else is forest.",
+		"terrain": "forest",
+		"items": [],
+		"directions": {
+			"north": "",
+			"south": "default",
+			"east": "default", 
+			"west": "", 
+			"up": "", 
+			"down": ""
+		}
+	},
+	"-1,-3,0":{
+		"name": "-1,-3,0",
+		"description": "You are in a forest. To the north is a lake covered by an eerie mist. Everywhere else is forest.",
+		"terrain": "forest",
+		"items": [],
+		"directions": {
+			"north": "default",
+			"south": "default",
+			"east": "default", 
+			"west": "default", 
+			"up": "", 
+			"down": ""
+		}
+	},
+	"-1,-4,0":{
+		"name": "-1,-4,0",
+		"description": "You are in a forest.",
+		"terrain": "forest",
+		"items": [],
+		"directions": {
+			"north": "default",
+			"south": "default",
+			"east": "default", 
+			"west": "default", 
+			"up": "", 
+			"down": ""
+		}
+	},
+	"0,-4,0":{
+		"name": "0,-4,0",
+		"description": "You are in a forest. To the north is a clearing with a lake, upon which lies an eerie mist.",
+		"terrain": "forest",
+		"items": [],
+		"directions": {
+			"north": "default",
+			"south": "default",
+			"east": "default", 
+			"west": "default", 
+			"up": "", 
+			"down": ""
+		}
+	},
+	"-2,-4,0":{
+		"name": "-2,-4,0",
+		"description": "You are in a forest. To the west is a cliff much too steep to climb.",
+		"terrain": "forest",
+		"items": [],
+		"directions": {
+			"north": "default",
+			"south": "default",
+			"east": "default", 
+			"west": "", 
+			"up": "", 
+			"down": ""
+		}
+	},
+	"-2,-5,0":{
+		"name": "-2,-5,0",
+		"description": "You are in a forest.",
+		"terrain": "forest",
+		"items": [],
+		"directions": {
+			"north": "default",
+			"south": "default",
+			"east": "default", 
+			"west": "default", 
+			"up": "", 
+			"down": ""
+		}
+	},
+	"-2,-6,0":{
+		"name": "-2,-6,0",
+		"description": "You are in a forest.",
+		"terrain": "forest",
+		"items": [],
+		"directions": {
+			"north": "default",
+			"south": "default",
+			"east": "default", 
+			"west": "default", 
+			"up": "", 
+			"down": ""
+		}
+	},
+	"-2,-7,0":{
+		"name": "-2,-7,0",
+		"description": "You are in a forest.",
+		"terrain": "forest",
+		"items": [],
+		"directions": {
+			"north": "default",
+			"south": "default",
+			"east": "default", 
+			"west": "default", 
+			"up": "", 
+			"down": ""
+		}
+	},
+	"-2,-8,0":{
+		"name": "-2,-8,0",
+		"description": "You are still in a forest.",
+		"terrain": "forest",
+		"items": [],
+		"directions": {
+			"north": "default",
+			"south": "default",
+			"east": "default", 
+			"west": "default", 
+			"up": "", 
+			"down": ""
+		}
+	},
+	"-2,-9,0":{
+		"name": "-2,-9,0",
+		"description": "You are in a forest.",
+		"terrain": "forest",
+		"items": [],
+		"directions": {
+			"north": "default",
+			"south": "default",
+			"east": "default", 
+			"west": "default", 
+			"up": "", 
+			"down": ""
+		}
+	},
+	"-2,-10,0":{
+		"name": "-2,-10,0",
+		"description": "You are in a forest.",
+		"terrain": "forest",
+		"items": [],
+		"directions": {
+			"north": "default",
+			"south": "default",
+			"east": "default", 
+			"west": "default", 
+			"up": "", 
+			"down": ""
+		}
+	},
+	"-2,-11,0":{
+		"name": "-2,-10,0",
+		"description": "You are in a forest. To the west is a cliff much too steep to climb.",
+		"terrain": "forest",
+		"items": [],
+		"directions": {
+			"north": "default",
+			"south": "default",
+			"east": "default", 
+			"west": "", 
+			"up": "", 
+			"down": ""
+		}
+	},
+	"-2,-12,0":{
+		"name": "-2,-10,0",
+		"description": "You are in a forest. To the west and south is a cliff much too steep to climb. There is a giant crack in the cliff halfway up which looks like a silly face.",
+		"terrain": "forest",
+		"items": [],
+		"directions": {
+			"north": "default",
+			"south": "",
+			"east": "default", 
+			"west": "", 
+			"up": "", 
+			"down": ""
+		}
+	},
+	"-3,-5,0":{
+		"name": "-3,-5,0",
+		"description": "You are in a forest. To the west is a cliff much too steep to climb.",
+		"terrain": "forest",
+		"items": [],
+		"directions": {
+			"north": "default",
+			"south": "default",
+			"east": "default", 
+			"west": "", 
+			"up": "", 
+			"down": ""
+		}
+	},
+	"-3,-6,0":{
+		"name": "-3,-6,0",
+		"description": "You are in a forest. To the west is a cliff much too steep to climb.",
+		"terrain": "forest",
+		"items": [],
+		"directions": {
+			"north": "default",
+			"south": "default",
+			"east": "default", 
+			"west": "", 
+			"up": "", 
+			"down": ""
+		}
+	},
+	"-3,-7,0":{
+		"name": "-3,-7,0",
+		"description": "You are in a forest. To the west is a cliff much too steep to climb.",
+		"terrain": "forest",
+		"items": [],
+		"directions": {
+			"north": "default",
+			"south": "default",
+			"east": "default", 
+			"west": "", 
+			"up": "", 
+			"down": ""
+		}
+	},
+	"-3,-8,0":{
+		"name": "-3,-8,0",
+		"description": "You are in a forest. To the west is a cliff much too steep to climb.",
+		"terrain": "forest",
+		"items": [],
+		"directions": {
+			"north": "default",
+			"south": "default",
+			"east": "default", 
+			"west": "", 
+			"up": "", 
+			"down": ""
+		}
+	},
+	"-3,-9,0":{
+		"name": "-3,-9,0",
+		"description": "You are in a forest. To the west is a cliff much too steep to climb.",
+		"terrain": "forest",
+		"items": [],
+		"directions": {
+			"north": "default",
+			"south": "default",
+			"east": "default", 
+			"west": "", 
+			"up": "", 
+			"down": ""
+		}
+	},
+	"-3,-10,0":{
+		"name": "-3,-10,0",
+		"description": "You are in a forest. To the west and south is a cliff much too steep to climb.",
+		"terrain": "forest",
+		"items": [],
+		"directions": {
+			"north": "default",
+			"south": "default",
+			"east": "default", 
+			"west": "", 
+			"up": "", 
+			"down": ""
+		}
+	},
+	"-1,-5,0":{
+		"name": "-1,-5,0",
+		"description": "You are in a forest.",
+		"terrain": "forest",
+		"items": [],
+		"directions": {
+			"north": "default",
+			"south": "default",
+			"east": "default", 
+			"west": "default", 
+			"up": "", 
+			"down": ""
+		}
+	},
+	"-1,-6,0":{
+		"name": "-1,-6,0",
+		"description": "You are in a forest.",
+		"terrain": "forest",
+		"items": [],
+		"directions": {
+			"north": "default",
+			"south": "default",
+			"east": "default", 
+			"west": "default", 
+			"up": "", 
+			"down": ""
+		}
+	},
+	"-1,-7,0":{
+		"name": "-1,-7,0",
+		"description": "You are in a forest.",
+		"terrain": "forest",
+		"items": [],
+		"directions": {
+			"north": "default",
+			"south": "default",
+			"east": "default", 
+			"west": "default", 
+			"up": "", 
+			"down": ""
+		}
+	},
+	"-1,-8,0":{
+		"name": "-1,-8,0",
+		"description": "You are in a forest.",
+		"terrain": "forest",
+		"items": [],
+		"directions": {
+			"north": "default",
+			"south": "default",
+			"east": "default", 
+			"west": "default", 
+			"up": "", 
+			"down": ""
+		}
+	},
+	"-1,-9,0":{
+		"name": "-1,-9,0",
+		"description": "You are in a forest.",
+		"terrain": "forest",
+		"items": [],
+		"directions": {
+			"north": "default",
+			"south": "default",
+			"east": "default", 
+			"west": "default", 
+			"up": "", 
+			"down": ""
+		}
+	},
+	"-1,-10,0":{
+		"name": "-1,-10,0",
+		"description": "You are in a forest.",
+		"terrain": "forest",
+		"items": [],
+		"directions": {
+			"north": "default",
+			"south": "default",
+			"east": "default", 
+			"west": "default", 
+			"up": "", 
+			"down": ""
+		}
+	},
+	"-1,-11,0":{
+		"name": "-1,-11,0",
+		"description": "You are in a forest.",
+		"terrain": "forest",
+		"items": [],
+		"directions": {
+			"north": "default",
+			"south": "default",
+			"east": "default", 
+			"west": "default", 
+			"up": "", 
+			"down": ""
+		}
+	},
+	"-1,-12,0":{
+		"name": "-1,-12,0",
+		"description": "You are in a forest.",
+		"terrain": "forest",
+		"items": [],
+		"directions": {
+			"north": "default",
+			"south": "default",
+			"east": "default", 
+			"west": "default", 
+			"up": "", 
+			"down": ""
+		}
+	},
+	"-1,-13,0":{
+		"name": "-1,-13,0",
+		"description": "You are in a forest. To the west and south is a cliff much too steep to climb.",
+		"terrain": "forest",
+		"items": [],
+		"directions": {
+			"north": "default",
+			"south": "",
+			"east": "default", 
+			"west": "", 
+			"up": "", 
+			"down": ""
+		}
+	},
+	"0,-5,0":{
+		"name": "0,-5,0",
+		"description": "You are in a forest.",
+		"terrain": "forest",
+		"items": [],
+		"directions": {
+			"north": "default",
+			"south": "default",
+			"east": "default", 
+			"west": "default", 
+			"up": "", 
+			"down": ""
+		}
+	},
+	"0,-6,0":{
+		"name": "0,-6,0",
+		"description": "You are in a forest.",
+		"terrain": "forest",
+		"items": [],
+		"directions": {
+			"north": "default",
+			"south": "default",
+			"east": "default", 
+			"west": "default", 
+			"up": "", 
+			"down": ""
+		}
+	},
+	"0,-7,0":{
+		"name": "0,-7,0",
+		"description": "You are in a forest.",
+		"terrain": "forest",
+		"items": [],
+		"directions": {
+			"north": "default",
+			"south": "default",
+			"east": "default", 
+			"west": "default", 
+			"up": "", 
+			"down": ""
+		}
+	},
+	"0,-8,0":{
+		"name": "0,-8,0",
+		"description": "You are in a forest.",
+		"terrain": "forest",
+		"items": [],
+		"directions": {
+			"north": "default",
+			"south": "default",
+			"east": "default", 
+			"west": "default", 
+			"up": "", 
+			"down": ""
+		}
+	},
+	"0,-9,0":{
+		"name": "0,-9,0",
+		"description": "You are in a forest.",
+		"terrain": "forest",
+		"items": [],
+		"directions": {
+			"north": "default",
+			"south": "default",
+			"east": "default", 
+			"west": "default", 
+			"up": "", 
+			"down": ""
+		}
+	},
+	"0,-10,0":{
+		"name": "0,-10,0",
+		"description": "You are in a forest.",
+		"terrain": "forest",
+		"items": [],
+		"directions": {
+			"north": "default",
+			"south": "default",
+			"east": "default", 
+			"west": "default", 
+			"up": "", 
+			"down": ""
+		}
+	},
+	"0,-11,0":{
+		"name": "0,-11,0",
+		"description": "You are in a forest.",
+		"terrain": "forest",
+		"items": [],
+		"directions": {
+			"north": "default",
+			"south": "default",
+			"east": "default", 
+			"west": "default", 
+			"up": "", 
+			"down": ""
+		}
+	},
+	"0,-12,0":{
+		"name": "0,-12,0",
+		"description": "You are in a forest.",
+		"terrain": "forest",
+		"items": [],
+		"directions": {
+			"north": "default",
+			"south": "default",
+			"east": "default", 
+			"west": "default", 
+			"up": "", 
+			"down": ""
+		}
+	},
+	"0,-13,0":{
+		"name": "0,-13,0",
+		"description": "You are in a forest.",
+		"terrain": "forest",
+		"items": [],
+		"directions": {
+			"north": "default",
+			"south": "default",
+			"east": "default", 
+			"west": "default", 
+			"up": "", 
+			"down": ""
+		}
+	},
+	"0,-14,0":{
+		"name": "0,-5,0",
+		"description": "You are in a forest. To the west is a cliff much too steep to climb.",
+		"terrain": "forest",
+		"items": [],
+		"directions": {
+			"north": "default",
+			"south": "default",
+			"east": "default", 
+			"west": "", 
+			"up": "", 
+			"down": ""
+		}
+	},
+	"0,-15,0":{
+		"name": "0,-15,0",
+		"description": "You are in a forest. To the west and south is a cliff much too steep to climb.",
+		"terrain": "forest",
+		"items": [],
+		"directions": {
+			"north": "default",
+			"south": "",
+			"east": "default", 
+			"west": "", 
 			"up": "", 
 			"down": ""
 		}
