@@ -21,7 +21,17 @@
 			"type": "log",
 			"weight": 500,
 			"description": "The size of the log is impressive.",
-			"count": 1
+			"examination": "How did you even pick this up?",
+			"count": 1,
+			"relations": {
+				"under": [{
+					"type": "pebble",
+					"description": "A pebble under a log"
+				}, {
+					"type": "pebble",
+					"description": "A mysteriously blue pebble under a log"
+				}]
+			}
 		}],
 		"directions": {
 			"north": "default",
