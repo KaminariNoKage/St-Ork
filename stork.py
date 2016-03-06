@@ -1,5 +1,6 @@
 import json
 import random
+from dbs import item_db
 
 class World:
     def __init__(self):
@@ -34,10 +35,10 @@ class World:
 
 class Cell:
     def __init__(self, name, data):
-        print("Making cell:", name)
+        # print("Making cell:", name)
         self.name = name
         self.description = data["description"]
-        self.directions = data["directions"]
+        self.directions  = data["directions"]
         for key in self.directions:
             if self.directions[key] == "default":
                 x, y, z = name.split(",")
@@ -55,29 +56,22 @@ class Cell:
                 elif key == "down":
                     self.directions[key] = ','.join([str(x), str(y), str(z-1)])
 
+        items_names = data["items"] if "items" in data else []
 
-
-        self.items = data["items"] if "items" in data else [] # Optional to include
+        self.items = [Item(name) for name in items_names]
     
     def alter(self, command, *args):
         pass
 
     def look(self):
         '''Return string based on current view and state (inc. items)'''
-        return self.description
+        description = self.description
+        for item in self.items:
+            description = description + "\n  " + item.look()
+        return description
 
     def items(self):
         return self.items
-
-item_db = {
-    "pebble": {
-        "description": "A rock",
-        "actions": {
-            "throw": lambda args: print("Threw rock")
-        },
-        "weight": 0.1
-    }
-}
 
 insults = [
     "As if",
@@ -90,9 +84,10 @@ insults = [
 
 class Item:
     def __init__(self, name):
-        self.name = data[name]
+        self.name = name
         data = item_db[name]
         self.description = data["description"]
+        self.examination = data["examination"]
         self.actions     = data["actions"]
         self.weight      = data["weight"]
 
@@ -102,8 +97,21 @@ class Item:
         else:
             self.insult()
 
-    def insult():
+    def can_take(self, game):
+        return True
+
+    def can_put(self, game):
+        return True
+
+    def insult(self):
         print(random.choice(insults))
+
+    # Perhaps change to handle items that have interactions with other items?
+    def look(self):
+        return self.description
+
+    def examine(self):
+        return self.examination
 
 class Inventory():
     def __init__(self):
@@ -147,7 +155,11 @@ class ActionHandler(dict):
         self.actions = {
             "move": self.move,
             "look": self.look,
-            "identify": self.whoami
+            "identify": self.whoami,
+            "take": self.take,
+            "drop": self.drop,
+            "examine": self.examine,
+            "inventory": self.inventory
         }
 
     def do(self, command, args):
@@ -164,6 +176,50 @@ class ActionHandler(dict):
     def look(self, args):
         description = self.game.world.look()
         print(description)
+
+    def inventory(self, args):
+        items = self.game.player.inventory.items
+        if not items:
+            print("Empty inventory")
+        count = 1
+        for item in items:
+            print(count, ": ", item.name, sep="")
+            count = count + 1
+
+    def examine(self, args):
+        name = args
+        items = self.game.player.inventory.items
+        matches = [item for item in items if item.name == name]
+
+        for match in matches:
+            print(match.examination)
+
+    def take(self, args):
+        name = args
+        items = self.game.world.position.items
+        matches = [item for item in items if item.name == name] # Filtered items
+
+        if matches:
+            item = matches[0]
+            if not item.can_take(self.game):
+                item.insult()
+                return
+            items.remove(item)
+            self.game.player.inventory.add(item)
+            print("Added", name, "to inventory")
+        else:
+            print("No such item", name)
+
+    def drop(self, args):
+        name = args
+        items = self.game.player.inventory.items
+        matches = [item for item in items if item.name == name]
+
+        if matches:
+            idx = items.index(matches[0])
+            item = items.pop(idx)
+            self.game.world.position.items.append(item)
+            print("Dropping", name)
 
     def whoami(self, args):
         player = self.game.player

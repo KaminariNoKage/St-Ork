@@ -67,7 +67,7 @@
 	"0,0,-2": {
 		"name": "0,0,-2",
 		"description": "You are underwater, surrounded by large bolders and floating over a bed of moss. Light glimmers from above.",
-		"items": [],
+		"items": ["pebble"],
 		"directions": {
 			"north": "",
 			"south": "",
