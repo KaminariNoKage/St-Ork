@@ -4,25 +4,77 @@
 		"description": "You are underwater. Light glimmers from above.",
 		"items": [],
 		"directions": {
-			"north": True,
-			"south": True,
-			"east": True, 
-			"west": True, 
-			"up": True, 
-			"down": True
+			"north": "default",
+			"south": "default",
+			"east": "default", 
+			"west": "default", 
+			"up": "default", 
+			"down": "default"
+		}
+	},
+	"1,0,-1": {	
+		"name": "0,0,-1",
+		"description": "You are underwater. Light glimmers from above and you are standing on a large log.",
+		"items": [],
+		"directions": {
+			"north": "default",
+			"south": "default",
+			"east": "default", 
+			"west": "default", 
+			"up": "default", 
+			"down": ""
+		}
+	},
+	"-1,0,-1": {	
+		"name": "0,0,-1",
+		"description": "You are underwater. Light glimmers from above and your foot taps a mossy bed below.",
+		"items": [],
+		"directions": {
+			"north": "default",
+			"south": "default",
+			"east": "default", 
+			"west": "default", 
+			"up": "default", 
+			"down": ""
+		}
+	},
+	"0,1,-1": {	
+		"name": "0,1,-1",
+		"description": "You are underwater. Light glimmers from above and your foot taps a mossy bed below.",
+		"items": [],
+		"directions": {
+			"north": "default",
+			"south": "default",
+			"east": "default", 
+			"west": "default", 
+			"up": "default", 
+			"down": ""
+		}
+	},
+	"0,-1,-1": {	
+		"name": "0,-1,-1",
+		"description": "You are underwater. Light glimmers from above and your foot taps a mossy bed below.",
+		"items": [],
+		"directions": {
+			"north": "default",
+			"south": "default",
+			"east": "default", 
+			"west": "default", 
+			"up": "default", 
+			"down": ""
 		}
 	},
 	"0,0,-2": {
 		"name": "0,0,-2",
-		"description": "You are underwater and floating over a bed of moss. Light glimmers from above.",
+		"description": "You are underwater, surrounded by large bolders and floating over a bed of moss. Light glimmers from above.",
 		"items": [],
 		"directions": {
-			"north": True,
-			"south": True,
-			"east": True, 
-			"west": True, 
-			"up": True, 
-			"down": False
+			"north": "",
+			"south": "",
+			"east": "", 
+			"west": "", 
+			"up": "default", 
+			"down": ""
 		}
 	},
 	"0,0,0": {
@@ -30,12 +82,12 @@
 		"description": "You are surfaced in the middle of the lake. There is mist and water surrounds you in all directions.",
 		"items": [],
 		"directions": {
-			"north": True,
-			"south": True,
-			"east": True, 
-			"west": True, 
-			"up": False, 
-			"down": True
+			"north": "default",
+			"south": "default",
+			"east": "default", 
+			"west": "default", 
+			"up": "", 
+			"down": "default"
 		}
 	},
 	"0,1,0":{
@@ -43,12 +95,25 @@
 		"description": "You are in a lake. There is mist and water surrounds you in all directions, but you can make out the shore in the distance.",
 		"items": [],
 		"directions": {
-			"north": True,
-			"south": True,
-			"east": True, 
-			"west": True, 
-			"up": False, 
-			"down": True
+			"north": "default",
+			"south": "default",
+			"east": "default", 
+			"west": "default", 
+			"up": "", 
+			"down": "default"
+		}
+	},
+	"0,2,0":{
+		"name": "0,1,0",
+		"description": "You are knee deep in water. Through the mist, you can make out a forest to the north.",
+		"items": [],
+		"directions": {
+			"north": "default",
+			"south": "default",
+			"east": "default", 
+			"west": "default", 
+			"up": "", 
+			"down": ""
 		}
 	},
 	"0,-1,0":{
@@ -56,25 +121,64 @@
 		"description": "You are in a lake. There is mist and water surrounds you in all directions, but you can make out the shore in the distance.",
 		"items": [],
 		"directions": {
-			"north": True,
-			"south": True,
-			"east": True, 
-			"west": True, 
-			"up": False, 
-			"down": True
+			"north": "default",
+			"south": "default",
+			"east": "default", 
+			"west": "default", 
+			"up": "", 
+			"down": "default"
+		}
+	},
+	"0,-2,0":{
+		"name": "0,-1,0",
+		"description": "You are knee deep in water. To the north, there is only more water. To the south there is a forest.",
+		"items": [],
+		"directions": {
+			"north": "default",
+			"south": "default",
+			"east": "default", 
+			"west": "default", 
+			"up": "", 
+			"down": ""
 		}
 	},
 	"1,0,0":{
 		"name": "1,0,0",
 		"description": "You are in a lake. There is mist and water surrounds you in all directions, but you can make out the shore in the distance.",
-		"items": ["log"],
+		"items": [],
 		"directions": {
-			"north": True,
-			"south": True,
-			"east": True, 
-			"west": True, 
-			"up": False, 
-			"down": True
+			"north": "default",
+			"south": "default",
+			"east": "default", 
+			"west": "default", 
+			"up": "", 
+			"down": "default"
+		}
+	},
+	"1,1,0":{
+		"name": "1,1,0",
+		"description": "You are knee deep in water and standing on a log. A mist surrounds you in all directions. You cannot see anything.",
+		"items": [],
+		"directions": {
+			"north": "default",
+			"south": "default",
+			"east": "default", 
+			"west": "default", 
+			"up": "", 
+			"down": ""
+		}
+	},
+	"1,-1,0":{
+		"name": "1,-1,0",
+		"description": "You are knee deep in water and a mist surrounds you in all directions. You cannot see anything.",
+		"items": [],
+		"directions": {
+			"north": "default",
+			"south": "default",
+			"east": "default", 
+			"west": "default", 
+			"up": "", 
+			"down": ""
 		}
 	},
 	"-1,0,0":{
@@ -82,12 +186,38 @@
 		"description": "You are in a lake. There is mist and water surrounds you in all directions, but you can make out the shore in the distance.",
 		"items": [],
 		"directions": {
-			"north": True,
-			"south": True,
-			"east": True, 
-			"west": True, 
-			"up": False, 
-			"down": True
+			"north": "default",
+			"south": "default",
+			"east": "default", 
+			"west": "default", 
+			"up": "", 
+			"down": "default"
+		}
+	},
+	"-1,1,0":{
+		"name": "-1,1,0",
+		"description": "You are knee deep in water. To the south and east, there is a lake covered by a mist; to the north and west there is a rocky shore and a forest.",
+		"items": [],
+		"directions": {
+			"north": "default",
+			"south": "default",
+			"east": "default", 
+			"west": "default", 
+			"up": "", 
+			"down": ""
+		}
+	},
+	"-1,-1,0":{
+		"name": "-1,-1,0",
+		"description": "You are knee deep in water. To the north and east, there is a lake covered by a mist; to the south and west there is a rocky shore and a forest.",
+		"items": [],
+		"directions": {
+			"north": "default",
+			"south": "default",
+			"east": "default", 
+			"west": "default", 
+			"up": "", 
+			"down": ""
 		}
 	}
 }
